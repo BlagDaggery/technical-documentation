@@ -3,3 +3,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.section-header {
+  font-size: 1.5em;
+}
+
+pre {
+  background-color: lightgrey;
+}
