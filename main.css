@@ -4,10 +4,29 @@ body {
   padding: 0;
 }
 
+#navbar {
+  text-align: center;
+}
+
 .section-header {
   font-size: 1.5em;
 }
 
 pre {
   background-color: lightgrey;
+}
+
+@media (min-width: 700px) {
+  #page-container {
+    display: grid;
+    grid-template-columns: 250px 1000px;
+  }
+
+  #navbar {
+    position: sticky;
+  }
+
+  .nav-link {
+    display: block;
+  }
 }
