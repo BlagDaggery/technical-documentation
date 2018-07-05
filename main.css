@@ -8,6 +8,10 @@ body {
   text-align: center;
 }
 
+#main-doc {
+  padding: 10px;
+}
+
 .section-header {
   font-size: 1.5em;
 }
