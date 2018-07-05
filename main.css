@@ -24,6 +24,7 @@ pre {
 
   #navbar {
     position: sticky;
+    top: 21.28px;
   }
 
   .nav-link {
