@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Technical Documentation | BlagDaggery</title>
+    <title>JavaScript Objects | BlagDaggery</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -12,102 +12,189 @@
       <section id="nav-container">
         <nav id="navbar">
           <header>
-            <h1>Documentation! Yeah!</h1>
+            <h1>JavaScript Objects</h1>
           </header>
-          <a href="#Section_1" class="nav-link">Section 1</a>
-          <a href="#Section_2" class="nav-link">Section 2</a>
-          <a href="#Section_3" class="nav-link">Section 3</a>
-          <a href="#Section_4" class="nav-link">Section 4</a>
-          <a href="#Section_5" class="nav-link">Section 5</a>
+          <a href="#Introduction" class="nav-link">Introduction</a>
+          <a href="#Creating_an_Object" class="nav-link">Creating an Object</a>
+          <a href="#Accessing_Object_Data" class="nav-link">Accessing Object Data</a>
+          <a href="#Setting_Object_Data" class="nav-link">Setting Object Data</a>
+          <a href="#Object_Constructors" class="nav-link">Object Constructors</a>
+          <a href="#JSON" class="nav-link">JSON</a>
         </nav>
       </section>
       <section id="content-container">
         <main id="main-doc">
-          <section id="Section_1" class="main-section">
-            <header class="section-header">Section 1</header>
-            <p>Paragraph</p>
+          <section id="Introduction" class="main-section">
+            <header class="section-header">Introduction</header>
+            <p>In JavaScript, an object is a form of data storage that is often used to represent real-world objects. Objects consist of properties and methods. Properties describe the object itself, and methods define what the object can do.</p>
+            <p>For example, you are a person (as far as we know...), and you have a variety of characteristics that describe you, such as your:</p>
             <ul>
-              <li>Hey</li>
-              <li>Hey</li>
+              <li>Name</li>
+              <li>Age</li>
+              <li>Occupation</li>
             </ul>
-            <pre>
-              <code>
-                if (havingFun) {
-                  console.log("Hooray!");
-                } else {
-                  console.log("Let's do something else!");
-                }
-              </code>
-            </pre>
-            <p>Paragraph</p>
+            <p>If we were to create an object to describe you, these characteristics would be among your <b>properties</b>.</p>
+            <p>You can also do stuff, like introduce yourself. In the object about you, a function to introduce yourself would be among your <b>methods</b>.</p>
           </section>
-          <section id="Section_2" class="main-section">
-            <header class="section-header">Section 2</header>
-            <p>Paragraph</p>
-            <ul>
-              <li>Hey</li>
-              <li>Hey</li>
-            </ul>
+          <section id="Creating_an_Object" class="main-section">
+            <header class="section-header">Creating an Object</header>
+            <p>The simplest way to create an object, is to declare a variable, give it a name, and set it equal to a pair of curly brackets with nothing in between, like this:</p>
             <pre>
               <code>
-                if (havingFun) {
-                  console.log("Hooray!");
-                } else {
-                  console.log("Let's do something else!");
-                }
+                var emptyObject = {};
               </code>
             </pre>
-            <p>Paragraph</p>
+            <p>However, an object like this isn't helpful, and pretty boring, so let's create an object that's a little more exciting. Perhaps a person! Since, I don't know you, let's use a fictional character like Luke Skywalker as our example:</p>
+            <pre>
+              <code>
+                var lukeSkywalker = {
+                  name: 'Luke Skywalker',
+                  age: 19,
+                  occupation: 'moisture farmer',
+                  greeting: function() {
+                    console.log(Hello! My name is Luke Skywalker and I am a Moisture Farmer.");
+                  }
+                };
+              </code>
+            </pre>
+            <p>See? We declared a variable and set it equal to a list of key-value pairs.</p>
           </section>
-          <section id="Section_3" class="main-section">
-            <header class="section-header">Section 3</header>
-            <p>Paragraph</p>
-            <ul>
-              <li>Hey</li>
-              <li>Hey</li>
-            </ul>
+          <section id="Accessing_Object_Data" class="main-section">
+            <header class="section-header">Accessing Object Data</header>
+            <p>So now we have our object, let's access the data!</p>
+            <p>We can access the data in two different ways:</p>
+            <ol>
+              <li>Dot Notation</li>
+              <li>Bracket Notation</li>
+            </ol>
+            <p>Our Luke Skywalker object has been saved in a script on this web page. Open up your browser's development tools, and go to the JavaScript console if you want to practice accessing the data.</p>
+            <p>In the console, type the following commands, pressing Enter/Return after each one:</p>
             <pre>
               <code>
-                if (havingFun) {
-                  console.log("Hooray!");
-                } else {
-                  console.log("Let's do something else!");
-                }
+                //Dot notation
+                lukeSkywalker.age
+                lukeSkywalker.occupation
+                lukeSkywalker.greeting()
+
+                //Bracket notation
+                lukeSkywalker['age']
+                lukeSkywalker['occupation']
+                lukeSkywalker['greeting']()
               </code>
             </pre>
-            <p>Paragraph</p>
+            <p>Cool beans! You now know how to access object data.</p>
           </section>
-          <section id="Section_4" class="main-section">
-            <header class="section-header">Section 4</header>
-            <p>Paragraph</p>
+          <section id="Setting_Object_Data" class="main-section">
+            <header class="section-header">Setting Object Data</header>
+            <p>If simply accessing object wasn't enough for you, then you're in luck! You can also define new properties or change the value of existing properies by declaring the properity you want to set (using dot or bracket notation), like this:</p>
             <pre>
               <code>
-                if (havingFun) {
-                  console.log("Hooray!");
-                } else {
-                  console.log("Let's do something else!");
-                }
+                lukeSkywalker.age = 25;
+                lukeSkywalker['occupation'] = 'Jedi Knight';
               </code>
             </pre>
-            <p>Paragraph</p>
+            <p>Now type the same commands as in the previous section, and the new values should appear!</p>
+            <pre>
+              <code>
+                lukeSkywalker.age
+                lukeSkywalker.occupation
+                lukeSkywalker.greeting()
+              </code>
+            </pre>
+            <p>Woah! Pretty cool right?</p>
           </section>
-          <section id="Section_5" class="main-section">
-            <header class="section-header">Section 5</header>
-            <p>Paragraph</p>
+          <section id="Object_Constructors" class="main-section">
+            <header class="section-header">Object Constructors</header>
+            <p>"THIS IS AMAZING! NOW I WANT TO MAKE A HAN SOLO OBJECT!" - you, probably...</p>
+            <p>OK! Fine! Relax! I'll show you how!</p>
+            <p>To create Han Solo, we could type everything out, like this:</p>
             <pre>
               <code>
-                if (havingFun) {
-                  console.log("Hooray!");
-                } else {
-                  console.log("Let's do something else!");
+                var hanSolo = {
+                  name: 'Han Solo',
+                  age: 29,
+                  occupation: 'smuggler',
+                  greeting: function() {
+                    console.log("Hello! My name is Han Solo and I am a smuggler.");
+                  }
+                };
+              </code>
+            </pre>
+            <p>But that take too long! You're a busy person. You have lots objects you want to create a not enough time to do so!</p>
+            <p>Fret not, young Padawan, we can speed up the process of object creation by declaring a function that acts as an object constructor. For example:</p>
+            <pre>
+              <code>
+                function Person(name, age, occupation) {
+                  this.name = name;
+                  this.age = age;
+                  this.occupation = occupation;
+                  this.greeting = function() {
+                    console.log(`Hello! My name is ${this.name} and I am a ${this.occupation}.`);
+                  }
                 }
               </code>
             </pre>
-            <p>Paragraph</p>
+            <p>The code above will create a new object with all of the properties and methods you need. Create your Han Solo object by going to your console and typing this:</p>
+            <pre>
+              <code>
+                var hanSolo = new Person('Han Solo', 29, 'smuggler');
+              </code>
+            </pre>
+            <p>Then access the data like before:</p>
+            <pre>
+              <code>
+                hanSolo.name
+                hanSolo.age
+                hanSolo.greeting()
+              </code>
+            </pre>
+            <p>Look at that! You're getting pretty good at this!</p>
+            <p>In our last few moments together, let me show you something that you will encounter a lot when you start building web applications...</p>
+          </section>
+          <section id="JSON" class="main-section">
+            <header class="section-header">JSON</header>
+            <p>JSON (short for "JavaScript Object Notion") is a human-friendly way of structuring data to be transmitted from one place to another. The syntax is based on JavaScript objects!</p>
+            <p>Here is an example of what it looks like:</p>
+            <pre>
+              <code>
+                {
+                  "organizationName": "Jedi Order",
+                  "headquarters": "Jedi Temple",
+                  "headquartersLocation": "Coruscant",
+                  "members": [
+                    {
+                      "name": "Yoda",
+                      "age": 900,
+                      "lightsaberColor": "green"
+                    },
+                    {
+                      "name": "Obi-Wan Kenobi",
+                      "age": 30,
+                      "lightsaberColor": "blue"
+                    },
+                  ]
+                }
+              </code>
+            </pre>
+            <p>It kinda looks a lot like an object, right? That's the point!</p>
+            <p>When you start building your own web applications, you will likely need to request data from some other source. When you do so, it will probably be delivered to you in JSON format.</p>
+            <p>What you can do is save that JSON data as a variable in your source code, and access it the same way you would any other object!</p>
+            <p>May the Force be with you...</p>
           </section>
         </main>
       </section>
     </section>
+    <script>
+    function Person(name, age, occupation) {
+      this.name = name;
+      this.age = age;
+      this.occupation = occupation;
+      this.greeting = function() {
+        console.log(`Hello! My name is ${this.name} and I am a ${this.occupation}.`);
+      }
+    }
+    var lukeSkywalker = new Person('Luke Skywalker', 19, 'moisture farmer');
+    </script>
     <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
   </body>
 </html>
