@@ -51,20 +51,20 @@
             <p>The simplest way to create an object, is to declare a variable, give it a name, and set it equal to a pair of curly brackets with nothing in between, like this:</p>
             <pre>
               <code>
-                var emptyObject = {};
+  var emptyObject = {};
               </code>
             </pre>
             <p>However, an object like this isn't helpful, and pretty boring, so let's create an object that's a little more exciting. Perhaps a person! Since, I don't know you, let's use a fictional character like Luke Skywalker as our example:</p>
             <pre>
               <code>
-                var lukeSkywalker = {
-                  name: 'Luke Skywalker',
-                  age: 19,
-                  occupation: 'moisture farmer',
-                  greeting: function() {
-                    console.log(Hello! My name is Luke Skywalker and I am a Moisture Farmer.");
-                  }
-                };
+  var lukeSkywalker = {
+    name: 'Luke Skywalker',
+    age: 19,
+    occupation: 'moisture farmer',
+    greeting: function() {
+      console.log(Hello! My name is Luke Skywalker and I am a Moisture Farmer.");
+    }
+  };
               </code>
             </pre>
             <p>See? We declared a variable and set it equal to a list of key-value pairs.</p>
@@ -81,15 +81,15 @@
             <p>In the console, type the following commands, pressing Enter/Return after each one:</p>
             <pre>
               <code>
-                //Dot notation
-                lukeSkywalker.age
-                lukeSkywalker.occupation
-                lukeSkywalker.greeting()
+  //Dot notation
+  lukeSkywalker.age
+  lukeSkywalker.occupation
+  lukeSkywalker.greeting()
 
-                //Bracket notation
-                lukeSkywalker['age']
-                lukeSkywalker['occupation']
-                lukeSkywalker['greeting']()
+  //Bracket notation
+  lukeSkywalker['age']
+  lukeSkywalker['occupation']
+  lukeSkywalker['greeting']()
               </code>
             </pre>
             <p>Cool beans! You now know how to access object data.</p>
@@ -99,16 +99,16 @@
             <p>If simply accessing object wasn't enough for you, then you're in luck! You can also define new properties or change the value of existing properies by declaring the properity you want to set (using dot or bracket notation), like this:</p>
             <pre>
               <code>
-                lukeSkywalker.age = 25;
-                lukeSkywalker['occupation'] = 'Jedi Knight';
+  lukeSkywalker.age = 25;
+  lukeSkywalker['occupation'] = 'Jedi Knight';
               </code>
             </pre>
             <p>Now type the same commands as in the previous section, and the new values should appear!</p>
             <pre>
               <code>
-                lukeSkywalker.age
-                lukeSkywalker.occupation
-                lukeSkywalker.greeting()
+  lukeSkywalker.age
+  lukeSkywalker.occupation
+  lukeSkywalker.greeting()
               </code>
             </pre>
             <p>Woah! Pretty cool right?</p>
@@ -120,28 +120,28 @@
             <p>To create Han Solo, we could type everything out, like this:</p>
             <pre>
               <code>
-                var hanSolo = {
-                  name: 'Han Solo',
-                  age: 29,
-                  occupation: 'smuggler',
-                  greeting: function() {
-                    console.log("Hello! My name is Han Solo and I am a smuggler.");
-                  }
-                };
+  var hanSolo = {
+    name: 'Han Solo',
+    age: 29,
+    occupation: 'smuggler',
+    greeting: function() {
+      console.log("Hello! My name is Han Solo and I am a smuggler.");
+    }
+  };
               </code>
             </pre>
             <p>But that take too long! You're a busy person. You have lots objects you want to create a not enough time to do so!</p>
             <p>Fret not, young Padawan, we can speed up the process of object creation by declaring a function that acts as an object constructor. For example:</p>
             <pre>
               <code>
-                function Person(name, age, occupation) {
-                  this.name = name;
-                  this.age = age;
-                  this.occupation = occupation;
-                  this.greeting = function() {
-                    console.log(`Hello! My name is ${this.name} and I am a ${this.occupation}.`);
-                  }
-                }
+  function Person(name, age, occupation) {
+    this.name = name;
+    this.age = age;
+    this.occupation = occupation;
+    this.greeting = function() {
+      console.log(`Hello! My name is ${this.name} and I am a ${this.occupation}.`);
+    }
+  }
               </code>
             </pre>
             <p>The code above will create a new object with all of the properties and methods you need. Create your Han Solo object by going to your console and typing this:</p>
@@ -153,9 +153,9 @@
             <p>Then access the data like before:</p>
             <pre>
               <code>
-                hanSolo.name
-                hanSolo.age
-                hanSolo.greeting()
+  hanSolo.name
+  hanSolo.age
+  hanSolo.greeting()
               </code>
             </pre>
             <p>Look at that! You're getting pretty good at this!</p>
@@ -167,23 +167,23 @@
             <p>Here is an example of what it looks like:</p>
             <pre>
               <code>
-                {
-                  "organizationName": "Jedi Order",
-                  "headquarters": "Jedi Temple",
-                  "headquartersLocation": "Coruscant",
-                  "members": [
-                    {
-                      "name": "Yoda",
-                      "age": 900,
-                      "lightsaberColor": "green"
-                    },
-                    {
-                      "name": "Obi-Wan Kenobi",
-                      "age": 30,
-                      "lightsaberColor": "blue"
-                    },
-                  ]
-                }
+  {
+    "organizationName": "Jedi Order",
+    "headquarters": "Jedi Temple",
+    "headquartersLocation": "Coruscant",
+    "members": [
+      {
+        "name": "Yoda",
+        "age": 900,
+        "lightsaberColor": "green"
+      },
+      {
+        "name": "Obi-Wan Kenobi",
+        "age": 30,
+        "lightsaberColor": "blue"
+      },
+    ]
+  }
               </code>
             </pre>
             <p>It kinda looks a lot like an object, right? That's the point!</p>
