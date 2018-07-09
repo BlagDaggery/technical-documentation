@@ -1,11 +1,20 @@
-body {
+#page-container {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
+  margin: -8px;
   padding: 0;
 }
 
 #navbar {
   text-align: center;
+}
+
+.nav-link-container {
+  display: block;
+  padding: 2.5px 0 2.5px 0;
+}
+
+.nav-link {
+  text-decoration: none;
 }
 
 #main-doc {
@@ -23,15 +32,15 @@ pre {
 @media (min-width: 700px) {
   #page-container {
     display: grid;
-    grid-template-columns: 250px 1000px;
+    grid-template-columns: 220px 1fr;
+  }
+
+  #main-doc {
+    border-left: 1px solid black;
   }
 
   #navbar {
     position: sticky;
     top: 21.28px;
-  }
-
-  .nav-link {
-    display: block;
   }
 }
