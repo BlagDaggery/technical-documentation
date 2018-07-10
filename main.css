@@ -46,6 +46,14 @@ pre {
   border-left: solid 5px #93dc28;
 }
 
+#logo-container {
+  text-align: center;
+}
+
+#logo {
+  margin-top: 10px;
+}
+
 @media (min-width: 700px) {
   #page-container {
     display: grid;
