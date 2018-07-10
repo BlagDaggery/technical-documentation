@@ -2,19 +2,24 @@
   font-family: 'Roboto', sans-serif;
   margin: -8px;
   padding: 0;
+  color: #2a2d34;
 }
 
-#navbar {
+#nav-container {
   text-align: center;
+  background-color: #e3e3e3;
 }
 
-.nav-link-container {
+
+.nav-link {
+  text-decoration: none;
+  color: #2a2d34;
   display: block;
   padding: 2.5px 0 2.5px 0;
 }
 
-.nav-link {
-  text-decoration: none;
+.nav-link:hover, .nav-link:active {
+  background-color: #93dc28;
 }
 
 #main-doc {
@@ -23,8 +28,19 @@
 
 .section-header {
   font-size: 1.5em;
+  padding-top: 10px; 
+  border-top: solid 5px #93dc28;
 }
 
+/*
+.section-header::before {
+  border-top: solid 5px #93dc28;
+  content: '';
+  display: block;
+
+}
+*/
 pre {
-  background-color: lightgrey;
+  background-color: #e3e3e3;
+  border-left: solid 5px #93dc28;
 }
