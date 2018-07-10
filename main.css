@@ -37,10 +37,13 @@ body {
   padding: 10px;
 }
 
+.main-section {
+  border-bottom: solid 5px #93dc28;
+}
+
 .section-header {
   font-size: 1.5em;
   padding-top: 10px;
-  border-top: solid 5px #93dc28;
 }
 
 pre {
