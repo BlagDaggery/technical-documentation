@@ -44,7 +44,10 @@
 pre {
   background-color: #e3e3e3;
   border-left: solid 5px #93dc28;
+  overflow: auto;
+  padding-right: 10px;
 }
+
 
 #logo-container {
   text-align: center;
