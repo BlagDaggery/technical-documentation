@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #page-container {
   font-family: 'Roboto', sans-serif;
   margin: -8px;
@@ -10,6 +15,10 @@
   background-color: #e3e3e3;
 }
 
+#navbar h1 {
+  margin-top: 0;
+  padding-top: 21.28px;
+}
 
 .nav-link {
   text-decoration: none;
@@ -28,19 +37,32 @@
 
 .section-header {
   font-size: 1.5em;
-  padding-top: 10px; 
+  padding-top: 10px;
   border-top: solid 5px #93dc28;
 }
 
-/*
-.section-header::before {
-  border-top: solid 5px #93dc28;
-  content: '';
-  display: block;
-
-}
-*/
 pre {
   background-color: #e3e3e3;
   border-left: solid 5px #93dc28;
+}
+
+@media (min-width: 700px) {
+  #page-container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    margin-top: -8px;
+  }
+
+  #main-doc {
+    border-left: 1px solid black;
+  }
+
+  #navbar {
+    position: sticky;
+    top: 21.28px;
+  }
+
+  #navbar h1 {
+    padding-top: 0;
+  }
 }
