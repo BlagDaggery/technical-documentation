@@ -28,19 +28,3 @@
 pre {
   background-color: lightgrey;
 }
-
-@media (min-width: 700px) {
-  #page-container {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-  }
-
-  #main-doc {
-    border-left: 1px solid black;
-  }
-
-  #navbar {
-    position: sticky;
-    top: 21.28px;
-  }
-}
