@@ -6,9 +6,28 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <!--
-    <style>Add media query here before releasing</style>
-    -->
+    <style>
+    @media (min-width: 700px) {
+      #page-container {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        margin-top: -8px;
+      }
+
+      #main-doc {
+        border-left: 1px solid black;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 21.28px;
+      }
+
+      #navbar h1 {
+        padding-top: 0;
+      }
+    }
+    </style>
   </head>
   <body>
     <section id="page-container">
@@ -65,7 +84,7 @@
     age: 19,
     occupation: 'moisture farmer',
     greeting: function() {
-      console.log(Hello! My name is Luke Skywalker and I am a Moisture Farmer.");
+      console.log(Hello! My name is Luke Skywalker and I am a moisture farmer.");
     }
   };
               </code>
